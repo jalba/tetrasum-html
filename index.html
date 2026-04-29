@@ -8,15 +8,51 @@
     <script
       type="module"
       crossorigin
-      src="/tetrasum-html/assets/index-BrskXiuu.js"
+      src="/tetrasum-html/assets/index-vt7N9GZJ.js"
     ></script>
     <link
       rel="stylesheet"
       crossorigin
-      href="/tetrasum-html/assets/index-N_Qhimze.css"
+      href="/tetrasum-html/assets/index-D654oxlS.css"
     />
   </head>
   <body>
     <div id="app"></div>
+    <dialog class="win-dialog">
+      <div class="modal-header">
+        <slot name="header"> you won!!! </slot>
+      </div>
+      <div class="modal-body">
+        <slot name="body"> Play again? </slot>
+      </div>
+      <div class="modal-footer">
+        <slot name="footer">
+          <button class="modal-default-button new-game">New game</button>
+          <button class="modal-default-button close">Cancel</button>
+        </slot>
+      </div>
+    </dialog>
+    <dialog class="how-to-dialog">
+      <div class="modal-header">
+        <slot name="header"> How to play? </slot>
+      </div>
+      <div class="modal-body">
+        <slot name="body">
+          <img src="/tetrasum-html/tetrasum.gif" />
+          <p>
+            The objective of the game is to sum up squares so that you finish in
+            one of the light blue target squares:
+          </p>
+          <img class="explain" src="/tetrasum-html/target.png" />
+          <p>with the amount indicated by the solution squares:</p>
+          <img class="explain" src="/tetrasum-html/solution.png" />
+        </slot>
+      </div>
+      <div class="modal-footer">
+        <slot name="footer">
+          <a class="actions how">Got it</a>
+        </slot>
+      </div>
+    </dialog>
   </body>
 </html>
