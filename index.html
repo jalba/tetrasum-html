@@ -8,12 +8,12 @@
     <script
       type="module"
       crossorigin
-      src="/tetrasum-html/assets/index-DlPe-h90.js"
+      src="/tetrasum-html/assets/index-ByjhMiQA.js"
     ></script>
     <link
       rel="stylesheet"
       crossorigin
-      href="/tetrasum-html/assets/index-Dw-XsvBG.css"
+      href="/tetrasum-html/assets/index-B15DvouA.css"
     />
   </head>
   <body>
@@ -29,6 +29,42 @@
         <slot name="footer">
           <button class="modal-default-button new-game">New game</button>
           <button class="modal-default-button close">Cancel</button>
+        </slot>
+      </div>
+    </dialog>
+    <dialog class="new-game-dialog">
+      <div class="modal-header">
+        <slot name="header"> New game </slot>
+      </div>
+      <div class="modal-body">
+        <slot name="body"> Are you sure you want to start a new game? </slot>
+      </div>
+      <div class="modal-footer">
+        <slot name="footer">
+          <button class="modal-default-button new-game">New game</button>
+          <button class="modal-default-button close">Cancel</button>
+        </slot>
+      </div>
+    </dialog>
+    <dialog class="settings">
+      <div class="modal-header">
+        <slot name="header"> Options </slot>
+      </div>
+      <div class="modal-body">
+        <slot name="body">
+          <div class="dialog-button">
+            <a class="new-game">New Game</a>
+          </div>
+        </slot>
+        <div class="dialog-button">
+          <a class="how-to">How to play?</a>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <slot name="footer">
+          <div class="dialog-button">
+            <a class="cancel">Cancel</a>
+          </div>
         </slot>
       </div>
     </dialog>
@@ -50,7 +86,9 @@
       </div>
       <div class="modal-footer">
         <slot name="footer">
-          <a class="actions how">Got it</a>
+          <div class="dialog-button">
+            <a class="cancel how">Got it</a>
+          </div>
         </slot>
       </div>
     </dialog>
