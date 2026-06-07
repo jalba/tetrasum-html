@@ -8,69 +8,81 @@
     <script
       type="module"
       crossorigin
-      src="/tetrasum-html/assets/index-ByjhMiQA.js"
+      src="/tetrasum-html/assets/index-D1oCPxFd.js"
     ></script>
     <link
       rel="stylesheet"
       crossorigin
-      href="/tetrasum-html/assets/index-B15DvouA.css"
+      href="/tetrasum-html/assets/index-D11Z6VfM.css"
     />
   </head>
   <body>
     <div id="app"></div>
-    <dialog class="win-dialog">
+    <dialog class="win-dialog splash">
       <div class="modal-header">
-        <slot name="header"> you won!!! </slot>
-      </div>
-      <div class="modal-body">
-        <slot name="body"> Play again? </slot>
-      </div>
-      <div class="modal-footer">
-        <slot name="footer">
-          <button class="modal-default-button new-game">New game</button>
-          <button class="modal-default-button close">Cancel</button>
-        </slot>
-      </div>
-    </dialog>
-    <dialog class="new-game-dialog">
-      <div class="modal-header">
-        <slot name="header"> New game </slot>
-      </div>
-      <div class="modal-body">
-        <slot name="body"> Are you sure you want to start a new game? </slot>
-      </div>
-      <div class="modal-footer">
-        <slot name="footer">
-          <button class="modal-default-button new-game">New game</button>
-          <button class="modal-default-button close">Cancel</button>
-        </slot>
-      </div>
-    </dialog>
-    <dialog class="settings">
-      <div class="modal-header">
-        <slot name="header"> Options </slot>
+        <img src="/tetrasum-html/you_won.svg" alt="You won!!" />
       </div>
       <div class="modal-body">
         <slot name="body">
-          <div class="dialog-button">
-            <a class="new-game">New Game</a>
-          </div>
+          <p>Play again?</p>
         </slot>
-        <div class="dialog-button">
-          <a class="how-to">How to play?</a>
-        </div>
       </div>
       <div class="modal-footer">
         <slot name="footer">
-          <div class="dialog-button">
-            <a class="cancel">Cancel</a>
+          <div class="actions-wrapper">
+            <button class="actions new-game">New game</button>
+            <button class="actions close">Cancel</button>
+          </div>
+        </slot>
+      </div>
+    </dialog>
+    <dialog class="new-game-dialog splash">
+      <div class="modal-header">
+        <slot name="header">
+          <img src="/tetrasum-html/new_game.svg" />
+        </slot>
+      </div>
+      <div class="modal-body">
+        <slot name="body">
+          <p>Are you sure you want to start a new game?</p>
+        </slot>
+      </div>
+      <div class="modal-footer">
+        <slot name="footer">
+          <div class="actions-wrapper">
+            <button class="actions new-game">New game</button>
+            <button class="actions close">Cancel</button>
+          </div>
+        </slot>
+      </div>
+    </dialog>
+    <dialog class="settings splash">
+      <div class="modal-header">
+        <slot name="header">
+          <img src="/tetrasum-html/options.svg" alt="options" />
+        </slot>
+      </div>
+      <div class="modal-body">
+        <slot name="body">
+          <div class="actions-wrapper">
+            <button class="actions new-game">New game</button>
+            <button class="actions how-to">How to play?</button>
+          </div>
+        </slot>
+      </div>
+      <div class="modal-footer">
+        <slot name="footer">
+          <div class="actions-wrapper">
+            <button class="actions cancel">Cancel</button>
           </div>
         </slot>
       </div>
     </dialog>
     <dialog class="how-to-dialog">
       <div class="modal-header">
-        <slot name="header"> How to play? </slot>
+        <slot name="header">
+          <img src="/tetrasum-html/how_to_play.svg" alt="How to play?" />
+        </slot>
       </div>
       <div class="modal-body">
         <slot name="body">
@@ -86,8 +98,22 @@
       </div>
       <div class="modal-footer">
         <slot name="footer">
-          <div class="dialog-button">
-            <a class="cancel how">Got it</a>
+          <button class="actions got-it">&nbsp;&nbsp;Got it&nbsp;&nbsp;</button>
+        </slot>
+      </div>
+    </dialog>
+    <dialog class="entry splash">
+      <div class="modal-header">
+        <slot name="header">
+          <img src="/tetrasum-html/tetraadd.svg" alt="Tetradd" />
+          <img class="logo" src="/tetrasum-html/logo.svg" alt="Let's play" />
+        </slot>
+      </div>
+      <div class="modal-body">
+        <slot name="body">
+          <div class="actions-wrapper">
+            <button class="actions">Start a new game</button>
+            <button class="actions how-to">How to play?</button>
           </div>
         </slot>
       </div>
